@@ -1,5 +1,5 @@
-const CACHE = 'uta100-v1';
-const ASSETS = ['/', '/index.html', '/manifest.json', '/icon-192.png', '/icon-512.png'];
+const CACHE = 'uta100-v2';
+const ASSETS = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 // Install: cache all assets
 self.addEventListener('install', e => {
@@ -20,6 +20,6 @@ self.addEventListener('activate', e => {
 // Fetch: serve from cache, fall back to network
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request).catch(() => caches.match('/')))
+    caches.match(e.request).then(cached => cached || fetch(e.request).catch(() => caches.match('./')))
   );
 });
