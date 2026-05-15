@@ -678,7 +678,7 @@ function showBookmarkBanner() {
   b = document.createElement('div');
   b.id = 'bookmark-banner';
   b.style.cssText = 'background:#185FA5;color:#fff;padding:12px 16px;font-size:13px;line-height:1.5;display:flex;align-items:center;justify-content:space-between;gap:12px';
-  b.innerHTML = '<span>📲 <strong>Install as app:</strong> tap Share → Add to Home Screen for full offline use &amp; auto-save.</span><button onclick="document.getElementById('bookmark-banner').remove();localStorage.setItem('install_shown','1')" style="background:rgba(255,255,255,0.2);border:none;color:#fff;border-radius:20px;padding:6px 12px;font-size:12px;cursor:pointer;flex-shrink:0">Got it</button>';
+  b.innerHTML = `<span>📲 <strong>Install as app:</strong> tap Share → Add to Home Screen for full offline use &amp; auto-save.</span><button onclick="document.getElementById('bookmark-banner').remove();localStorage.setItem('install_shown','1')" style="background:rgba(255,255,255,0.2);border:none;color:#fff;border-radius:20px;padding:6px 12px;font-size:12px;cursor:pointer;flex-shrink:0">Got it</button>`;
   document.body.insertBefore(b, document.body.firstChild);
 }
 
